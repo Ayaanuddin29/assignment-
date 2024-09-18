@@ -13,6 +13,7 @@ mongoose.connect('mongodb+srv://khajaayaan2912:Ag5EOEvLTiDPmnda@cluster0.oje1b.m
 }).catch((err)=>{
     console.log(err);
 });
+app.use(express.static(path.join(__dirname,'/client/dist')));
 
 // Define Health Record Schema
 const healthRecordSchema = new mongoose.Schema({
