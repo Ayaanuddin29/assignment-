@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-import path from 'path';
+const path=require('path')
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -13,8 +13,6 @@ mongoose.connect('mongodb+srv://khajaayaan2912:Ag5EOEvLTiDPmnda@cluster0.oje1b.m
 }).catch((err)=>{
     console.log(err);
 });
-const __dirname=path.resolve();
-app.use(express.static(path.join(__dirname,'/client/dist')));
 
 // Define Health Record Schema
 const healthRecordSchema = new mongoose.Schema({
@@ -32,6 +30,8 @@ const healthRecordSchema = new mongoose.Schema({
 
 // Model
 const HealthRecord = mongoose.model('HealthRecord', healthRecordSchema);
+__dirname=path.resolve();
+app.use(express.static(path.join(__dirname,'/client/dist')));
 
 // Routes
 
