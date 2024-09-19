@@ -43,11 +43,8 @@ function AddHealthRecord() {
     <form onSubmit={handleSubmit}>
       <label>Date:</label>
       <input type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} required />
-      <label>Name:</label>
-      <input class='pad' type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
       <label>Body Temperature:</label>
       <input type="number" value={form.bodyTemperature} onChange={(e) => setForm({ ...form, bodyTemperature: e.target.value })} required />
-
       <label>Blood Pressure (Systolic/Diastolic):</label>
       <input type="number" value={form.systolic} onChange={(e) => setForm({ ...form, systolic: e.target.value })} required />
       <input type="number" value={form.diastolic} onChange={(e) => setForm({ ...form, diastolic: e.target.value })} required />

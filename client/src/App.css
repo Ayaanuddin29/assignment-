@@ -9,6 +9,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  /* background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNV9zaW1wbGVfM2RfaWxsdXN0cmF0aW9uX29mX2FfcmVjb3Zlcnlfcm9vbV93aV80ZjhkNDIwNC02N2I4LTQwMDQtYTBlNy05YjljMjIyMzE2ZGVfMS5qcGc.jpg"); */
 }
 h1{
   color:black;
@@ -103,14 +105,6 @@ form button {
 form button:hover {
   background-color: #0056b3;
 }
-
-/* Responsive design */
-@media (max-width: 600px) {
-  /* form {
-    width: 100%;
-    padding: 10px;
-  } */
-}
 label{
   color: black;
 }
@@ -125,10 +119,6 @@ table,td{
 form{
   margin: auto;
 }
-@media (min-width:468px){
-  .btable{
-    padding: 5px;
-    margin: 5px 25px 20px 23px;
-    width: 100%;
-  }
+.btable th{
+  border: 1px solild black;
 }

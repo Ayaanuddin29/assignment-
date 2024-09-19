@@ -19,11 +19,11 @@ function HealthDashboard() {
   return (
     <div>
       <h2>Health Records</h2>
-      <table border={2} class='btable'>
+      <div className='table-container'>
+      <table border={2} class='btable' className='table table-bordered responsive-table'>
         <thead>
           <tr>
             <th>Date</th>
-            <th>Name</th>
             <th>Body Temperature</th>
             <th>Blood Pressure</th>
             <th>Heart Rate</th>
@@ -34,7 +34,6 @@ function HealthDashboard() {
           {records.map(record => (
             <tr key={record._id}>
               <td>{new Date(record.date).toLocaleDateString()}</td>
-              <td>{record.name}</td>
               <td>{record.bodyTemperature}</td>
               <td>{`${record.bloodPressure.systolic}/${record.bloodPressure.diastolic}`}</td>
               <td>{record.heartRate}</td>
@@ -45,7 +44,9 @@ function HealthDashboard() {
           ))}
         </tbody>
       </table>
-    </div>
+      </div>
+      </div>
+
   );
 }
 
