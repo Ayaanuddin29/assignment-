@@ -30,7 +30,7 @@ const healthRecordSchema = new mongoose.Schema({
 
 // Model
 const HealthRecord = mongoose.model('HealthRecord', healthRecordSchema);
-__dirname=path.resolve();
+var __dirname=path.resolve();
 app.use(express.static(path.join(__dirname,'/client/dist')));
 
 // Routes
